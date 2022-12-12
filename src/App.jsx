@@ -26,7 +26,7 @@ function App() {
     // setTodo({...todo, [event.target.name]:[event.target.value]})
     console.log(data)
      const {name,email,mobile} = data
-    setTodo([...todo,name&&email&&mobile])
+    setTodo([...todo,(name&&email&&mobile)])
     // const {id,value} =e.target
     // setTodo({...todo,[id]:value})
     // console.log(todo)
