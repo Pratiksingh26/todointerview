@@ -25,9 +25,11 @@ function App() {
     event.preventDefault()
     // setTodo({...todo, [event.target.name]:[event.target.value]})
     console.log(data)
-     const {name,email,mobile} = data
-    setTodo([...todo,(name&&email&&mobile)])
-    // const {id,value} =e.target
+    //  const {name,email,mobile} = data
+    setTodo([...todo,data])
+    console.log(todo)
+    // console.log(typeof(todo))
+    // const {id,value} =event.target
     // setTodo({...todo,[id]:value})
     // console.log(todo)
     // setData({
@@ -52,9 +54,14 @@ function App() {
         todo.map((el,i) => {
           return(
             <>
-             <h1>{el}
-               <button onClick={() => {todo.splice(i,1); setTodo([...todo])}}>Delete</button>
-             </h1>
+             <div >
+              <span>{el.name}</span>
+              <br />
+              <span>{el.email}</span>
+              <br />
+              <span>{el.mobile}</span>
+              <button onClick={() =>  {todo.splice(i,1); setTodo([...todo])}}>delete</button>
+             </div>
             </>
           )
         })
